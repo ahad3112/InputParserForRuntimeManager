@@ -3,7 +3,7 @@
 ########## Line starting with # will be regarded as comments                                                         #
 ########## Case will be ignored                                                                                      #
 ########## Format for Contract                                                                                       #
-#################### contract[assumption: guarantee]                                                                 #
+#################### contract[comma/space separated assumptions : comma/space separated guarantees]                  #
 ############################## Assumption Parameters are read as name=value pair (separated using comma or space)    #
 ############################## User must provide all parameters with value                                           #
 ###################################               Assumption Parameters                                              #
@@ -30,10 +30,10 @@
 ################################### contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                       #
 ############################## Examples 3:                                                                           #
 ################################### contract[c2f=ok c2l=poor mode=cacc : increaseGap2pred=true]                      #
-############################## Examples 3:                                                                           #
+############################## Examples 4:                                                                           #
 ################################### contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg increaseGap2pred=true]   #
 ############################## NOTE: value for mode and transitionTo in a contract should not be same                #
 ######################################################################################################################
 
-# contract : [assumptions : guarantee]
+# contract[comma/space separated assumptions : comma/space separated guarantees]
 contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
