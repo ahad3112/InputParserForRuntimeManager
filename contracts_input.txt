@@ -30,11 +30,10 @@
 ################################### contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                       #
 ############################## Examples 3:                                                                           #
 ################################### contract[c2f=ok c2l=poor mode=cacc : increaseGap2pred=true]                      #
+############################## Examples 3:                                                                           #
+################################### contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg increaseGap2pred=true]   #
 ############################## NOTE: value for mode and transitionTo in a contract should not be same                #
 ######################################################################################################################
 
-# case is ignored
 # contract : [assumptions : guarantee]
-# assumptions : c2x = true/false, c2l = true/false, activeController = acc/ploeg/cacc
-# guarantee : toACC/toPLOEG/toCACC/gapControl
-contract[c2f = true, c2l = true, activeController = acc : toCACC]
+contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
