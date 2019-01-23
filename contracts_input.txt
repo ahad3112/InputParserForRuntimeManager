@@ -1,0 +1,40 @@
+######################################################################################################################
+# This is the input file format to specify Contracts for Runtime Manager                                             #
+########## Line starting with # will be regarded as comments                                                         #
+########## Case will be ignored                                                                                      #
+########## Format for Contract                                                                                       #
+#################### contract[assumption: guarantee]                                                                 #
+############################## Assumption Parameters are read as name=value pair (separated using comma or space)    #
+############################## User must provide all parameters with value                                           #
+###################################               Assumption Parameters                                              #
+###################################               ---------------------                                              #
+###################################               ---------------------                                              #
+###################################           name                      value                                        #
+###################################           ----                      -----                                        #
+###################################           c2f                       ok/poor/critical                             #
+###################################           c2l                       ok/poor/critical                             #
+###################################           mode                      acc/ploeg/cacc                               #
+###################################                                                                                  #
+############################## Guarantee Parameters are also read as name=value pair (separated using comma or space)#
+############################## User should provide at least one parameter with value                                 #
+###################################               Guarantee Parameters                                               #
+###################################               ---------------------                                              #
+###################################               ---------------------                                              #
+###################################           name                      value                                        #
+###################################           ----                      -----                                        #
+###################################           transitionTo              acc/ploeg/cacc                               #
+###################################           increaseGap2pred          true/false                                   #
+############################## Examples 1:                                                                           #
+################################### contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]                             #
+############################## Examples 2:                                                                           #
+################################### contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                       #
+############################## Examples 3:                                                                           #
+################################### contract[c2f=ok c2l=poor mode=cacc : increaseGap2pred=true]                      #
+############################## NOTE: value for mode and transitionTo in a contract should not be same                #
+######################################################################################################################
+
+# case is ignored
+# contract : [assumptions : guarantee]
+# assumptions : c2x = true/false, c2l = true/false, activeController = acc/ploeg/cacc
+# guarantee : toACC/toPLOEG/toCACC/gapControl
+contract[c2f = true, c2l = true, activeController = acc : toCACC]
