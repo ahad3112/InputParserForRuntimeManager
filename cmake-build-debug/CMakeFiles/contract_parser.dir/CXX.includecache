@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/maaahad/CLionProjects/contract_parser/RMParser.cpp
+RMParser.hpp
+/Users/maaahad/CLionProjects/contract_parser/RMParser.hpp
+parserGrammars/RMContractParserGrammar.hpp
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp
+
+/Users/maaahad/CLionProjects/contract_parser/RMParser.hpp
+iostream
+-
+fstream
+-
+string
+-
+map
+-
+memory
+-
+parserGrammars/RMParserGrammar.hpp
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.hpp
+parserGrammars/RMContractParserGrammar.hpp
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp
+
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp
+RMParserGrammar.hpp
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.hpp
+
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.hpp
+regex
+-
+
