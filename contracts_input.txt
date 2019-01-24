@@ -52,6 +52,7 @@
 
 # ::contract[type : comma/space separated assumptions : comma/space separated guarantees]
 as::contract#[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
+as::contrat#[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
 ::contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]
 ::contract[c2f=ok c2l=poor mode=cacc : gapControl=increase]
 ::contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase]

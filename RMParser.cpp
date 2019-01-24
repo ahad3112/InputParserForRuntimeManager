@@ -54,8 +54,10 @@ void RMParser::parse() {
     // parse(std::string &line) from the appropriate Grammar class will be called after reading every line
     std::string line;
     while(std::getline(input, line)) {
-        if(line.find("::contract") != std::string::npos && line.find("#") == std::string::npos) {
-            std::cout << line << std::endl;
+        // First remove the comments part of the line and leading and tailing whitespace
+        std::string formattedLine = removeCommentsAndTrim(line);
+        if(formattedLine.find("::contract") != std::string::npos) {
+            std::cout << formattedLine << std::endl;
         }
         // call matchedGrammar.parse(line);
     }
@@ -74,7 +76,7 @@ std::string COMMENT = "#";          // add more character that can define start 
 /**
 * String represents starting of WHITESPACE
 */
-std::string WHITESPACE = " ";       // add more character that can define WHITESPACE
+std::string WHITESPACE = "  \n\r\t\f\v";       // add more character that can define WHITESPACE
 
 std::string removeCommentsAndTrim(std::string &s) {
     std::string notComments = removeComments(s);
