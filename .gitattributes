@@ -1,2 +1,2 @@
 nguist-vendored
-*.js linguist-vendored=false
+*.cpp linguist-vendored=false
