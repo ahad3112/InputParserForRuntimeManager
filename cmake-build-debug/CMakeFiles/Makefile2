@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/maaahad/CLionProjects/contract_parser/cmake-build-debu
 CMakeFiles/contract_parser.dir/all:
 	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/depend
 	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target contract_parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target contract_parser"
 .PHONY : CMakeFiles/contract_parser.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/contract_parser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/contract_parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/contract_parser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/contract_parser.dir/rule

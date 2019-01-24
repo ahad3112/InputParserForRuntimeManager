@@ -82,7 +82,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/RMParser.cpp">
+			<Option target="contract_parser"/>
+		</Unit>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/RMParser.hpp">
+			<Option target="contract_parser"/>
+		</Unit>
 		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/main.cpp">
+			<Option target="contract_parser"/>
+		</Unit>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.cpp">
+			<Option target="contract_parser"/>
+		</Unit>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp">
+			<Option target="contract_parser"/>
+		</Unit>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.cpp">
+			<Option target="contract_parser"/>
+		</Unit>
+		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.hpp">
 			<Option target="contract_parser"/>
 		</Unit>
 		<Unit filename="/Users/maaahad/CLionProjects/contract_parser/CMakeLists.txt">

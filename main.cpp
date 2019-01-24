@@ -1,6 +1,7 @@
 #include <iostream>
+#include "RMParser.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    RMParser rmParser("/Users/maaahad/CLionProjects/contract_parser/contracts_input.txt");
     return 0;
 }

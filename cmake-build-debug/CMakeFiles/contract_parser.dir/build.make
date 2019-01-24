@@ -70,17 +70,62 @@ CMakeFiles/contract_parser.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contract_parser.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maaahad/CLionProjects/contract_parser/main.cpp -o CMakeFiles/contract_parser.dir/main.cpp.s
 
+CMakeFiles/contract_parser.dir/RMParser.cpp.o: CMakeFiles/contract_parser.dir/flags.make
+CMakeFiles/contract_parser.dir/RMParser.cpp.o: ../RMParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/contract_parser.dir/RMParser.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/contract_parser.dir/RMParser.cpp.o -c /Users/maaahad/CLionProjects/contract_parser/RMParser.cpp
+
+CMakeFiles/contract_parser.dir/RMParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/contract_parser.dir/RMParser.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maaahad/CLionProjects/contract_parser/RMParser.cpp > CMakeFiles/contract_parser.dir/RMParser.cpp.i
+
+CMakeFiles/contract_parser.dir/RMParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contract_parser.dir/RMParser.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maaahad/CLionProjects/contract_parser/RMParser.cpp -o CMakeFiles/contract_parser.dir/RMParser.cpp.s
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: CMakeFiles/contract_parser.dir/flags.make
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: ../parserGrammars/RMParserGrammar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o -c /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.cpp
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.cpp > CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.i
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.cpp -o CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.s
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: CMakeFiles/contract_parser.dir/flags.make
+CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: ../parserGrammars/RMContractParserGrammar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o -c /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.cpp
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.cpp > CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.i
+
+CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.cpp -o CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.s
+
 # Object files for target contract_parser
 contract_parser_OBJECTS = \
-"CMakeFiles/contract_parser.dir/main.cpp.o"
+"CMakeFiles/contract_parser.dir/main.cpp.o" \
+"CMakeFiles/contract_parser.dir/RMParser.cpp.o" \
+"CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o" \
+"CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o"
 
 # External object files for target contract_parser
 contract_parser_EXTERNAL_OBJECTS =
 
 contract_parser: CMakeFiles/contract_parser.dir/main.cpp.o
+contract_parser: CMakeFiles/contract_parser.dir/RMParser.cpp.o
+contract_parser: CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o
+contract_parser: CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o
 contract_parser: CMakeFiles/contract_parser.dir/build.make
 contract_parser: CMakeFiles/contract_parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable contract_parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable contract_parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/contract_parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

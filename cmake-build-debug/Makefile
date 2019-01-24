@@ -123,6 +123,33 @@ contract_parser/fast:
 	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/build
 .PHONY : contract_parser/fast
 
+RMParser.o: RMParser.cpp.o
+
+.PHONY : RMParser.o
+
+# target to build an object file
+RMParser.cpp.o:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/RMParser.cpp.o
+.PHONY : RMParser.cpp.o
+
+RMParser.i: RMParser.cpp.i
+
+.PHONY : RMParser.i
+
+# target to preprocess a source file
+RMParser.cpp.i:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/RMParser.cpp.i
+.PHONY : RMParser.cpp.i
+
+RMParser.s: RMParser.cpp.s
+
+.PHONY : RMParser.s
+
+# target to generate assembly for a file
+RMParser.cpp.s:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/RMParser.cpp.s
+.PHONY : RMParser.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +177,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parserGrammars/RMContractParserGrammar.o: parserGrammars/RMContractParserGrammar.cpp.o
+
+.PHONY : parserGrammars/RMContractParserGrammar.o
+
+# target to build an object file
+parserGrammars/RMContractParserGrammar.cpp.o:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o
+.PHONY : parserGrammars/RMContractParserGrammar.cpp.o
+
+parserGrammars/RMContractParserGrammar.i: parserGrammars/RMContractParserGrammar.cpp.i
+
+.PHONY : parserGrammars/RMContractParserGrammar.i
+
+# target to preprocess a source file
+parserGrammars/RMContractParserGrammar.cpp.i:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.i
+.PHONY : parserGrammars/RMContractParserGrammar.cpp.i
+
+parserGrammars/RMContractParserGrammar.s: parserGrammars/RMContractParserGrammar.cpp.s
+
+.PHONY : parserGrammars/RMContractParserGrammar.s
+
+# target to generate assembly for a file
+parserGrammars/RMContractParserGrammar.cpp.s:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.s
+.PHONY : parserGrammars/RMContractParserGrammar.cpp.s
+
+parserGrammars/RMParserGrammar.o: parserGrammars/RMParserGrammar.cpp.o
+
+.PHONY : parserGrammars/RMParserGrammar.o
+
+# target to build an object file
+parserGrammars/RMParserGrammar.cpp.o:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o
+.PHONY : parserGrammars/RMParserGrammar.cpp.o
+
+parserGrammars/RMParserGrammar.i: parserGrammars/RMParserGrammar.cpp.i
+
+.PHONY : parserGrammars/RMParserGrammar.i
+
+# target to preprocess a source file
+parserGrammars/RMParserGrammar.cpp.i:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.i
+.PHONY : parserGrammars/RMParserGrammar.cpp.i
+
+parserGrammars/RMParserGrammar.s: parserGrammars/RMParserGrammar.cpp.s
+
+.PHONY : parserGrammars/RMParserGrammar.s
+
+# target to generate assembly for a file
+parserGrammars/RMParserGrammar.cpp.s:
+	$(MAKE) -f CMakeFiles/contract_parser.dir/build.make CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.s
+.PHONY : parserGrammars/RMParserGrammar.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... contract_parser"
+	@echo "... RMParser.o"
+	@echo "... RMParser.i"
+	@echo "... RMParser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parserGrammars/RMContractParserGrammar.o"
+	@echo "... parserGrammars/RMContractParserGrammar.i"
+	@echo "... parserGrammars/RMContractParserGrammar.s"
+	@echo "... parserGrammars/RMParserGrammar.o"
+	@echo "... parserGrammars/RMParserGrammar.i"
+	@echo "... parserGrammars/RMParserGrammar.s"
 .PHONY : help
 
 

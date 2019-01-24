@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/contract_parser.dir/main.cpp.o"
+  "CMakeFiles/contract_parser.dir/RMParser.cpp.o"
+  "CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o"
+  "CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o"
   "contract_parser.pdb"
   "contract_parser"
 )
