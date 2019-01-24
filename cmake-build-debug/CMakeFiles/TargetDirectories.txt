@@ -1,0 +1,3 @@
+/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/maaahad/CLionProjects/contract_parser/cmake-build-debug/CMakeFiles/contract_parser.dir
