@@ -1,9 +1,22 @@
 ######################################################################################################################
 # This is the input file format to specify Contracts for Runtime Manager                                             #
+# Developed by: Muhammed Ahad                                                                                        #
+# E-mail      : maaahad@kth.se; ahad3112@yahoo.com                                                                   #
 ########## Line starting with # will be regarded as comments                                                         #
 ########## Case will be ignored                                                                                      #
+# ------------------------------------------------------------------------------------------------------------------ #
 ########## Format for Contract                                                                                       #
-#################### contract[comma/space separated assumptions : comma/space separated guarantees]                  #
+#################### contract[Type : comma/space separated Assumptions : comma/space separated Guarantees]           #
+# ------------------------------------------------------------------------------------------------------------------ #
+############################## Type Parameters are read as name=value pair                                           #
+############################## Required only one type=value                                                          #
+###################################                  Type Parameters                                                 #
+###################################               ---------------------                                              #
+###################################               ---------------------                                              #
+###################################           name                      value                                        #
+###################################           ----                      -----                                        #
+###################################           cType                      wifi                                        #
+# ------------------------------------------------------------------------------------------------------------------ #
 ############################## Assumption Parameters are read as name=value pair (separated using comma or space)    #
 ############################## User must provide all parameters with value                                           #
 ###################################               Assumption Parameters                                              #
@@ -14,7 +27,7 @@
 ###################################           c2f                       ok/poor/critical                             #
 ###################################           c2l                       ok/poor/critical                             #
 ###################################           mode                      acc/ploeg/cacc                               #
-###################################                                                                                  #
+# ------------------------------------------------------------------------------------------------------------------ #
 ############################## Guarantee Parameters are also read as name=value pair (separated using comma or space)#
 ############################## User should provide at least one parameter with value                                 #
 ###################################               Guarantee Parameters                                               #
@@ -23,17 +36,19 @@
 ###################################           name                      value                                        #
 ###################################           ----                      -----                                        #
 ###################################           transitionTo              acc/ploeg/cacc                               #
-###################################           increaseGap2pred          true/false                                   #
+###################################           gapControl                default/increase                             #
+# ------------------------------------------------------------------------------------------------------------------ #
 ############################## Examples 1:                                                                           #
 ################################### contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]                             #
 ############################## Examples 2:                                                                           #
 ################################### contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                       #
 ############################## Examples 3:                                                                           #
-################################### contract[c2f=ok c2l=poor mode=cacc : increaseGap2pred=true]                      #
+################################### contract[c2f=ok c2l=poor mode=cacc : gapControl=increase]                        #
 ############################## Examples 4:                                                                           #
-################################### contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg increaseGap2pred=true]   #
+################################### contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase]     #
+# ------------------------------------------------------------------------------------------------------------------ #
 ############################## NOTE: value for mode and transitionTo in a contract should not be same                #
 ######################################################################################################################
 
-# contract[comma/space separated assumptions : comma/space separated guarantees]
-contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
+# contract[type : comma/space separated assumptions : comma/space separated guarantees]
+contract[cType=wifi : c2f=ok c2l=ok mode=acc : transitionTo=cacc]
