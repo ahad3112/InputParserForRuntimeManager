@@ -2,7 +2,7 @@
 # This is the input file format to specify Contracts for Runtime Manager                                             #
 # Developed by: Muhammed Ahad                                                                                        #
 # E-mail      : maaahad@kth.se; ahad3112@yahoo.com                                                                   #
-########## Line starting with # will be regarded as comments                                                         #
+########## Anything following # in a line will be regarded as comments                                               #
 ########## Case will be ignored                                                                                      #
 # ------------------------------------------------------------------------------------------------------------------ #
 ########## Format for Contract                                                                                       #
