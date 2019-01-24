@@ -6,7 +6,7 @@
 ########## Case will be ignored                                                                                      #
 # ------------------------------------------------------------------------------------------------------------------ #
 ########## Format for Contract                                                                                       #
-#################### contract[Type : comma/space separated Assumptions : comma/space separated Guarantees]           #
+#################### ::contract[Type : comma/space separated Assumptions : comma/space separated Guarantees]         #
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## Type Parameters are read as name=value pair                                           #
 ############################## Required only one type=value                                                          #
@@ -39,16 +39,19 @@
 ###################################           gapControl                default/increase                             #
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## Examples 1:                                                                           #
-################################### contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]                             #
+################################### ::contract[c2f=ok c2l=ok mode=acc : transitionTo=cacc]                           #
 ############################## Examples 2:                                                                           #
-################################### contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                       #
+################################### ::contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]                     #
 ############################## Examples 3:                                                                           #
-################################### contract[c2f=ok c2l=poor mode=cacc : gapControl=increase]                        #
+################################### ::contract[c2f=ok c2l=poor mode=cacc : gapControl=increase]                      #
 ############################## Examples 4:                                                                           #
-################################### contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase]     #
+################################### ::contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase]   #
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## NOTE: value for mode and transitionTo in a contract should not be same                #
 ######################################################################################################################
 
-# contract[type : comma/space separated assumptions : comma/space separated guarantees]
-contract[cType=wifi : c2f=ok c2l=ok mode=acc : transitionTo=cacc]
+# ::contract[type : comma/space separated assumptions : comma/space separated guarantees]
+as::contract#[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
+::contract[c2f=ok c2l=critical mode=cacc : transitionTo=acc]
+::contract[c2f=ok c2l=poor mode=cacc : gapControl=increase]
+::contract[c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase]

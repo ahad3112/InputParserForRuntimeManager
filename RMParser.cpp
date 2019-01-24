@@ -54,10 +54,44 @@ void RMParser::parse() {
     // parse(std::string &line) from the appropriate Grammar class will be called after reading every line
     std::string line;
     while(std::getline(input, line)) {
-        std::cout << line << std::endl;
+        if(line.find("::contract") != std::string::npos && line.find("#") == std::string::npos) {
+            std::cout << line << std::endl;
+        }
         // call matchedGrammar.parse(line);
     }
 
     std::cout << "RMParser finished parsing the input file successfully." << std::endl;
 
+}
+
+////////////////////////////////////////////////////
+// Non-Member Function
+////////////////////////////////////////////////////
+/**
+ * String represents starting of comments
+ */
+std::string COMMENT = "#";          // add more character that can define start of comment
+/**
+* String represents starting of WHITESPACE
+*/
+std::string WHITESPACE = " ";       // add more character that can define WHITESPACE
+
+std::string removeCommentsAndTrim(std::string &s) {
+    std::string notComments = removeComments(s);
+    return notComments.empty() ? notComments : trim(notComments);
+}
+std::string removeComments(std::string &s) {
+    auto start = s.find_first_of(COMMENT);
+    return (start == std::string::npos) ? s : s.substr(0, start);
+}
+std::string trim(std::string &s) {
+    return right_trim(left_trim(s));
+}
+std::string left_trim(std::string &s) {
+    auto start = s.find_first_not_of(WHITESPACE);
+    return (start == std::string::npos) ? "" : s.substr(start);
+}
+std::string right_trim(std::string s) {
+    auto end = s.find_last_not_of(WHITESPACE);
+    return (end == std::string::npos) ? "" : s.substr(0, end+1);
 }
