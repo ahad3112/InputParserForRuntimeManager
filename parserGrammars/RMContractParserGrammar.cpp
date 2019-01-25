@@ -27,7 +27,7 @@ void RMContractParserGrammar::initRegexPattern() {
                                   "(cType)\\s*=\\s*(wifi)[\\s;]+"
                                   "(c2f)\\s*=\\s*(ok|poor|critical)[\\s;]+"
                                   "(c2l)\\s*=\\s*(ok|poor|critical)[\\s;]+"
-                                  "(mode)\\s*=\\s*(acc|ploeg|cacc)\\s*:\\s*"
+                                  "(mode)\\s*=\\s*(acc|ploeg|cacc)\\s*[:]+\\s*"
                                   "((transitionTo)\\s*=\\s*(acc|ploeg|cacc)[\\s;]*)?"
                                   "((gapControl)\\s*=\\s*(default|increase)[\\s;]*)?"
                                   "\\]";
@@ -36,7 +36,7 @@ void RMContractParserGrammar::initRegexPattern() {
 
 void RMContractParserGrammar::parse(std::string &s) {
     for(std::sregex_iterator it(s.begin(), s.end(), expression), end; it != end; ++it) {
-        //std::cout << "Found:::::: " << it->str() << std::endl;
-        std::cout << "Found:::::: " << (*it)[14].str() << std::endl;
+        std::cout << "Found:::::: " << it->str() << std::endl;
+        //std::cout << "Found:::::: " << (*it)[14].str() << std::endl;
     }
 }
