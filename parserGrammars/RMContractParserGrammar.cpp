@@ -24,7 +24,7 @@ RMContractParserGrammar::~RMContractParserGrammar() {
 ////////////////////////////////////////////////////
 void RMContractParserGrammar::initRegexPattern() {
     std::string contractPattern = "::contract\\s*\\[\\s*"
-                                  "(cType)\\s*=\\s*(wifi)[\\s;]+"
+                                  "(cType)\\s*=\\s*(wifi)\\s*[:]+\\s*"
                                   "(c2f)\\s*=\\s*(ok|poor|critical)[\\s;]+"
                                   "(c2l)\\s*=\\s*(ok|poor|critical)[\\s;]+"
                                   "(mode)\\s*=\\s*(acc|ploeg|cacc)\\s*[:]+\\s*"
