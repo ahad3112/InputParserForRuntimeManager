@@ -1,10 +1,20 @@
 ######################################################################################################################
-# This is the input file format to specify Contracts for Runtime Manager                                             #
-# Developed by: Muhammed Ahad                                                                                        #
-# E-mail      : maaahad@kth.se; ahad3112@yahoo.com                                                                   #
-########## Anything following # in a line will be regarded as comments                                               #
-########## Case will be ignored                                                                                      #
+#                                                                                                                    #
+# This is the input file to specify Contracts for Runtime Manager                                                    #
+#                                                                                                                    #
 # ------------------------------------------------------------------------------------------------------------------ #
+#                                                                                                                    #
+# Developed by : Muhammed Abdullah Al Ahad                                                                           #
+# E-mail       : maaahad@kth.se; ahad3112@yahoo.com                                                                  #
+#                                                                                                                    #
+# ------------------------------------------------------------------------------------------------------------------ #
+#                                                                                                                    #
+# Rules:                                                                                                             #
+#       * Anything following # in a line will be regarded as comments                                                #
+#       * To make the parser simpler, only small case will be considered                                             #
+#                                                                                                                    #
+# ------------------------------------------------------------------------------------------------------------------ #
+#                                                                                                                    #
 ########## Format for Contract                                                                                       #
 #################### ::contract[Type : comma/space separated Assumptions : comma/space separated Guarantees]         #
 # ------------------------------------------------------------------------------------------------------------------ #
@@ -15,7 +25,7 @@
 ###################################               ---------------------                                              #
 ###################################           name                      value                                        #
 ###################################           ----                      -----                                        #
-###################################           cType                      wifi                                        #
+###################################           ctype                      wifi                                        #
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## Assumption Parameters are read as name=value pair (separated using comma or space)    #
 ############################## User must provide all parameters with value                                           #
@@ -35,26 +45,27 @@
 ###################################               ---------------------                                              #
 ###################################           name                      value                                        #
 ###################################           ----                      -----                                        #
-###################################           transitionTo              acc/ploeg/cacc                               #
-###################################           gapControl                default/increase                             #
+###################################           transition2mode           acc/ploeg/cacc                               #
+###################################           dist2pred                 default/increase                             #
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## Examples 1:                                                                           #
-######################## ::contract[cType=wifi : c2f=ok c2l=ok mode=acc : transitionTo=cacc]                         #
+######################## ::contract[ctype=wifi : c2f=ok c2l=ok mode=acc : transition2mode=cacc]                      #
 ############################## Examples 2:                                                                           #
-######################## ::contract[cType=wifi : c2f=ok c2l=critical mode=cacc : transitionTo=acc]                   #
+######################## ::contract[ctype=wifi : c2f=ok c2l=critical mode=cacc : transition2mode=acc]                #
 ############################## Examples 3:                                                                           #
-######################## ::contract[cType=wifi : c2f=ok c2l=poor mode=cacc : gapControl=increase]                    #
+######################## ::contract[ctype=wifi : c2f=ok c2l=poor mode=cacc : dist2pred=increase]                     #
 ############################## Examples 4:                                                                           #
-######################## ::contract[cType=wifi : c2f=poor c2l=ok mode=cacc : transitionTo=ploeg gapControl=increase] #
+######################## ::contract[ctype=wifi : c2f=poor c2l=ok mode=cacc : transition2mode=ploeg dist2pred=increase]#
 # ------------------------------------------------------------------------------------------------------------------ #
 ############################## NOTE: value for mode and transitionTo in a contract should not be same                #
 ######################################################################################################################
 
 # ::contract[type : comma/space separated assumptions : comma/space separated guarantees]
-#as::contract#[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
-#as::contrat#[c2f=ok c2l=ok mode=acc : transitionTo=cacc]
-#::contract   [cType=wifi c2f=ok c2l=ok mode=acc : transitionTo=cacc]
-#::contractd[cType=wifi c2f=ok c2l=critical mode=cacc : transitionTo=acc]
-#::contract[cType=wifi c2f=ok c2l=poor mode=cacc : gapControl=increase]
-::contract[cType=wifi :c2f=poor   ;;;  ;c2l=ok;    mode=cacc  :::    transitionTo=ploeg     ;gapControl=increase  ]
-#::contract[cType=wifi ;c2f=poor c2l=ok mode=cacc : gapControl=increase transitionTo=ploeg ]
+## Test
+#::contract[ctype=wifi :c2f=ok c2l=critical mode=cacc : transition2mode=acc]
+#::contract[ctype=wifi :c2f=ok ;c2l=poor ;mode=cacc : dist2pred=increase]
+#::contract[ctype=wifi :c2f=poor   ;;;  ;c2l=ok;    mode=cacc  :::    transition2mode=ploeg     ;dist2pred=increase  ]
+#::contract[ ctype=wifi :c2f=poor   ;;;  ;c2l=ok;    mode=cacc  :::    transition2mode=ploeg     ;dist2pred= default  ]
+
+## Contracts
+::contract[ctype=wifi : c2f=ok; c2l=ok; mode=acc : transition2mode=cacc; dist2pred=default]

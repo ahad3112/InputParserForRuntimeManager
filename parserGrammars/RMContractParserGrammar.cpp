@@ -24,12 +24,12 @@ RMContractParserGrammar::~RMContractParserGrammar() {
 ////////////////////////////////////////////////////
 void RMContractParserGrammar::initRegexPattern() {
     std::string contractPattern = "::contract\\s*\\[\\s*"
-                                  "(cType)\\s*=\\s*(wifi)\\s*[:]+\\s*"
+                                  "((ctype)\\s*=\\s*(wifi)\\s*[:]+\\s*)?"
                                   "(c2f)\\s*=\\s*(ok|poor|critical)[\\s;]+"
                                   "(c2l)\\s*=\\s*(ok|poor|critical)[\\s;]+"
                                   "(mode)\\s*=\\s*(acc|ploeg|cacc)\\s*[:]+\\s*"
-                                  "((transitionTo)\\s*=\\s*(acc|ploeg|cacc)[\\s;]*)?"
-                                  "((gapControl)\\s*=\\s*(default|increase)[\\s;]*)?"
+                                  "((transition2mode)\\s*=\\s*(acc|ploeg|cacc)[\\s;]*)?"
+                                  "((dist2pred)\\s*=\\s*(default|increase)[\\s;]*)?"
                                   "\\]";
     expression = std::regex(contractPattern, std::regex::icase);
 }
