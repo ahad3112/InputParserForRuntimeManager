@@ -12,8 +12,9 @@ class RMParserGrammar {
 public:
     RMParserGrammar();
     virtual ~RMParserGrammar() = 0;
+    virtual void parse(std::string &s) = 0;
 protected:
-    std::regex pattern;
+    std::regex expression;
 };
 
 

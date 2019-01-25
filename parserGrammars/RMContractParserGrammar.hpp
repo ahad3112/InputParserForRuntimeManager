@@ -13,6 +13,10 @@ class RMContractParserGrammar : public RMParserGrammar{
 public:
     RMContractParserGrammar();
     ~RMContractParserGrammar() override;
+
+    void parse(std::string &s) override;
+private:
+    void initRegexPattern();
 };
 
 

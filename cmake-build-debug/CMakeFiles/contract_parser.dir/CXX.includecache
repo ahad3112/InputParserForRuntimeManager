@@ -6,29 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/maaahad/CLionProjects/contract_parser/RMParser.hpp
+/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.cpp
 iostream
 -
-fstream
--
-string
--
-map
--
-memory
--
-algorithm
--
-parserGrammars/RMParserGrammar.hpp
-/Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMParserGrammar.hpp
-parserGrammars/RMContractParserGrammar.hpp
+RMContractParserGrammar.hpp
 /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp
-
-/Users/maaahad/CLionProjects/contract_parser/main.cpp
-iostream
--
-RMParser.hpp
-/Users/maaahad/CLionProjects/contract_parser/RMParser.hpp
 
 /Users/maaahad/CLionProjects/contract_parser/parserGrammars/RMContractParserGrammar.hpp
 RMParserGrammar.hpp
