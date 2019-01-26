@@ -69,7 +69,7 @@
 #                                                                                                                    #
 # ------------------------------------------------------------------------------------------------------------------ #
 #                                                                                                                    #
-# EXAMPLE:
+# EXAMPLE:                                                                                                           #
 # Examples 1:                                                                                                        #
 #      ::contract[ctype=wifi : c2f=ok ; c2l=ok ; mode=acc : transition2mode=cacc]                                    #
 # Examples 2:                                                                                                        #

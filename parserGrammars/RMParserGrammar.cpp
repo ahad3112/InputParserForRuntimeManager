@@ -20,6 +20,6 @@ RMParserGrammar::~RMParserGrammar() {
 ////////////////////////////////////////////////////
 // Member function
 ////////////////////////////////////////////////////
-void RMParserGrammar::parse(std::string &s) {
+void RMParserGrammar::parse(std::string &s, unsigned lineNo) {
     std::cerr << "This method should not be called...." << std::endl;
 }

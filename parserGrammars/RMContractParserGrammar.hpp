@@ -14,9 +14,10 @@ public:
     RMContractParserGrammar();
     ~RMContractParserGrammar() override;
 
-    void parse(std::string &s) override;
+    void parse(std::string &s, unsigned lineNo) override;
 private:
     void initRegexPattern();
+    void evaluate(const std::smatch &match, unsigned lineNo);
 };
 
 

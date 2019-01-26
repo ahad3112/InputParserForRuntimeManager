@@ -53,14 +53,16 @@ void RMParser::parse() {
     std::cout << "RMParser start parsing the input file ...." << std::endl;
     // parse(std::string &line) from the appropriate Grammar class will be called after reading every line
     std::string line;
+    unsigned lineNo = 0;
     while(std::getline(input, line)) {
+        ++lineNo;
         // First remove the comments part of the line and leading and tailing whitespace
         std::string formattedLine = removeCommentsAndTrim(line);
         if(formattedLine.find("::contract") != std::string::npos) {
             //std::cout << formattedLine << std::endl;
             auto it = parserGrammars.find(ParserGrammarType::CONTRACT);
             if(it != parserGrammars.end()) {
-                (it->second)->parse(formattedLine);
+                (it->second)->parse(formattedLine, lineNo);
             }
         }
         // TODO: extension if there is any other Grammars available

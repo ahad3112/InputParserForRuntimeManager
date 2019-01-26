@@ -12,7 +12,7 @@ class RMParserGrammar {
 public:
     RMParserGrammar();
     virtual ~RMParserGrammar() = 0;
-    virtual void parse(std::string &s) = 0;
+    virtual void parse(std::string &s, unsigned lineNo) = 0;
 protected:
     std::regex expression;
 };

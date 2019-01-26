@@ -34,9 +34,22 @@ void RMContractParserGrammar::initRegexPattern() {
     expression = std::regex(contractPattern, std::regex::icase);
 }
 
-void RMContractParserGrammar::parse(std::string &s) {
+void RMContractParserGrammar::parse(std::string &s, unsigned lineNo) {
     for(std::sregex_iterator it(s.begin(), s.end(), expression), end; it != end; ++it) {
-        std::cout << "Found:::::: " << it->str() << std::endl;
-        //std::cout << "Found:::::: " << (*it)[14].str() << std::endl;
+        //std::cout << "LineNo: " << lineNo << "\n" << it->str() << std::endl;
+        //std::cout << "Found:::::: " << (*it)[4].str() << std::endl;
+        evaluate(*it, lineNo);
     }
+}
+
+void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo) {
+    // Sanity checking, if passed, generate the Contract instance
+    if(match[9].matched) {
+        if(match[8] == match[11]) {
+            std::string error = "value for mode and transition2mode are equal on line no: " + std::to_string(lineNo);
+            throw std::runtime_error(error);
+        }
+    }
+    // TODO : we can add more sanity checking later if time permits
+    //  Now create the instance of Contract and add to the RMCGContainer
 }
