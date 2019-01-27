@@ -55,7 +55,7 @@ void RMContractParserGrammar::parse(std::string &s, unsigned lineNo) {
     for(std::sregex_iterator it(s.begin(), s.end(), expression), end; it != end; ++it) {
         std::cout << "LineNo: " << lineNo << "\n" << it->str() << std::endl;
         //std::cout << "Found:::::: " << (*it)[4].str() << std::endl;
-        //evaluate(*it, lineNo);
+        evaluate(*it, lineNo);
     }
 }
 
@@ -81,7 +81,13 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
         if (dist2pred == dist2predMap.end()) throw std::runtime_error("missing dist2pred!!!");
 
         // add contract
-
+        std::cout << "ctype : " << ctype->second
+                  << " c2l : " << c2l->second
+                  << " c2f : " << c2f->second
+                  << " mode : " << mode->second
+                  << " transition2mode : " << transition2mode->second
+                  << " dist2pred : " << dist2pred->second
+                  << std::endl;
 
     } else if (match[9].matched) {
         // Sanity checking, if passed, generate the Contract instance
@@ -93,13 +99,23 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
         if (transition2mode == controllerMap.end()) throw std::runtime_error("missing transition2mode!!!");
 
         // add contract
-
+        std::cout << "ctype : " << ctype->second
+                  << " c2l : " << c2l->second
+                  << " c2f : " << c2f->second
+                  << " mode : " << mode->second
+                  << " transition2mode : " << transition2mode->second
+                  << std::endl;
     } else if (match[12].matched) {
         auto dist2pred = dist2predMap.find(match[14]);
         if (dist2pred == dist2predMap.end()) throw std::runtime_error("missing dist2pred!!!");
 
         // add contract
-
+        std::cout << "ctype : " << ctype->second
+                  << " c2l : " << c2l->second
+                  << " c2f : " << c2f->second
+                  << " mode : " << mode->second
+                  << " dist2pred : " << dist2pred->second
+                  << std::endl;
     } else {
         throw std::runtime_error("missing guarantee!!!");
     }
