@@ -11,6 +11,7 @@
 ////////////////////////////////////////////////////
 RMContractParserGrammar::RMContractParserGrammar() {
     initRegexPattern();
+    initParametersValueMap();
 }
 
 ////////////////////////////////////////////////////
@@ -34,6 +35,22 @@ void RMContractParserGrammar::initRegexPattern() {
     expression = std::regex(contractPattern, std::regex::icase);
 }
 
+void RMContractParserGrammar::initParametersValueMap() {
+    // CONTRACT_TYPE
+    ctypeMap.insert(std::make_pair(std::string("wifi"), CONTRACT_TYPE::WIFI));
+    // QUALITY
+    qualityMap.insert(std::make_pair(std::string("ok"), QUALITY::OK));
+    qualityMap.insert(std::make_pair(std::string("poor"), QUALITY::POOR));
+    qualityMap.insert(std::make_pair(std::string("critical"), QUALITY::CRITICAL));
+    // ACTIVE_CONTROLLER
+    controllerMap.insert(std::make_pair(std::string("acc"), ACTIVE_CONTROLLER::ACC));
+    controllerMap.insert(std::make_pair(std::string("ploeg"), ACTIVE_CONTROLLER::PLOEG));
+    controllerMap.insert(std::make_pair(std::string("cacc"), ACTIVE_CONTROLLER::CACC));
+    // GAP_CONTROL
+    gapcontrolMap.insert(std::make_pair(std::string("default"), GAP_CONTROL::DEFAULT));
+    gapcontrolMap.insert(std::make_pair(std::string("increase"), GAP_CONTROL::INCREASE));
+}
+
 void RMContractParserGrammar::parse(std::string &s, unsigned lineNo) {
     for(std::sregex_iterator it(s.begin(), s.end(), expression), end; it != end; ++it) {
         //std::cout << "LineNo: " << lineNo << "\n" << it->str() << std::endl;
@@ -46,10 +63,10 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
     // Sanity checking, if passed, generate the Contract instance
     if(match[9].matched) {
         if(match[8] == match[11]) {
-            std::string error = "value for mode and transition2mode are equal on line no: " + std::to_string(lineNo);
+            std::string error = "Value for mode and transition2mode are equal on line no: " + std::to_string(lineNo);
             throw std::runtime_error(error);
         }
     }
     // TODO : we can add more sanity checking later if time permits
-    //  Now create the instance of Contract and add to the RMCGContainer
+    // Now create the instance of Contract and add to the RMCGContainer
 }
