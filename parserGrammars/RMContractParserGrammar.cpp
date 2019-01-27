@@ -83,6 +83,7 @@ void RMContractParserGrammar::evaluate(RMParser *rmParser, const std::smatch &ma
 
         // add contract
         rmParser->addContract();
+
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second
@@ -102,6 +103,7 @@ void RMContractParserGrammar::evaluate(RMParser *rmParser, const std::smatch &ma
 
         // add contract
         rmParser->addContract();
+
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second
@@ -114,6 +116,7 @@ void RMContractParserGrammar::evaluate(RMParser *rmParser, const std::smatch &ma
 
         // add contract
         rmParser->addContract();
+
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second

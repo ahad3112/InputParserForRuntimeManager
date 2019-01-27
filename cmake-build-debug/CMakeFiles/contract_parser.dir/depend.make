@@ -11,10 +11,13 @@ CMakeFiles/contract_parser.dir/main.cpp.o: ../main.cpp
 CMakeFiles/contract_parser.dir/main.cpp.o: ../parserGrammars/RMContractParserGrammar.hpp
 CMakeFiles/contract_parser.dir/main.cpp.o: ../parserGrammars/RMParserGrammar.hpp
 
+CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: ../RMParser.hpp
 CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: ../parserGrammars/RMContractParserGrammar.cpp
 CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: ../parserGrammars/RMContractParserGrammar.hpp
 CMakeFiles/contract_parser.dir/parserGrammars/RMContractParserGrammar.cpp.o: ../parserGrammars/RMParserGrammar.hpp
 
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: ../RMParser.hpp
+CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: ../parserGrammars/RMContractParserGrammar.hpp
 CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: ../parserGrammars/RMParserGrammar.cpp
 CMakeFiles/contract_parser.dir/parserGrammars/RMParserGrammar.cpp.o: ../parserGrammars/RMParserGrammar.hpp
 

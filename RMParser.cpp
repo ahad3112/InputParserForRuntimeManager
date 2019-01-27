@@ -67,6 +67,8 @@ void RMParser::parse() {
             auto it = parserGrammars.find(ParserGrammarType::CONTRACT);
             if(it != parserGrammars.end()) {
                 (it->second)->parse(this, formattedLine, lineNo);
+            } else {
+                throw std::runtime_error("CONTRACT Grammar not available!!!");
             }
         }
         // TODO: extension if there is any other Grammars available
