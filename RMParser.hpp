@@ -30,6 +30,7 @@ class RMParser {
 public:
     RMParser(std::string inputFilename);
     ~RMParser();
+    void addContract();     // TODO... parameter will be added later
 private:
     void initGrammars();
     void parse();

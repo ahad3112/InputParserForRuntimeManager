@@ -36,6 +36,10 @@ RMParser::~RMParser() {
 ////////////////////////////////////////////////////
 // Member Function
 ////////////////////////////////////////////////////
+void RMParser::addContract() {
+    std::cout << "Contract is adding..." << std::endl;
+}
+
 void RMParser::initGrammars() {
     // This will be hard coded
     // CONTRACT Grammar
@@ -62,7 +66,7 @@ void RMParser::parse() {
             //std::cout << formattedLine << std::endl;
             auto it = parserGrammars.find(ParserGrammarType::CONTRACT);
             if(it != parserGrammars.end()) {
-                (it->second)->parse(formattedLine, lineNo);
+                (it->second)->parse(this, formattedLine, lineNo);
             }
         }
         // TODO: extension if there is any other Grammars available

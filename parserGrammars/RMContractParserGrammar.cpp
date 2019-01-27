@@ -4,6 +4,7 @@
 ***************************************************/
 
 #include <iostream>
+#include "../RMParser.hpp"
 #include "RMContractParserGrammar.hpp"
 
 ////////////////////////////////////////////////////
@@ -51,15 +52,15 @@ void RMContractParserGrammar::initParametersValueMap() {
     dist2predMap.insert(std::make_pair(std::string("increase"), GAP_CONTROL::INCREASE));
 }
 
-void RMContractParserGrammar::parse(std::string &s, unsigned lineNo) {
+void RMContractParserGrammar::parse(RMParser *rmParser, std::string &s, unsigned lineNo) {
     for(std::sregex_iterator it(s.begin(), s.end(), expression), end; it != end; ++it) {
         std::cout << "LineNo: " << lineNo << "\n" << it->str() << std::endl;
         //std::cout << "Found:::::: " << (*it)[4].str() << std::endl;
-        evaluate(*it, lineNo);
+        evaluate(rmParser, *it, lineNo);
     }
 }
 
-void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo) {
+void RMContractParserGrammar::evaluate(RMParser *rmParser, const std::smatch &match, unsigned lineNo) {
     auto ctype = ctypeMap.find(match[2].str());
     if (ctype == ctypeMap.end()) throw std::runtime_error("missing ctype!!!");
     auto c2l = qualityMap.find(match[4]);
@@ -81,6 +82,7 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
         if (dist2pred == dist2predMap.end()) throw std::runtime_error("missing dist2pred!!!");
 
         // add contract
+        rmParser->addContract();
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second
@@ -99,6 +101,7 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
         if (transition2mode == controllerMap.end()) throw std::runtime_error("missing transition2mode!!!");
 
         // add contract
+        rmParser->addContract();
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second
@@ -110,6 +113,7 @@ void RMContractParserGrammar::evaluate(const std::smatch &match, unsigned lineNo
         if (dist2pred == dist2predMap.end()) throw std::runtime_error("missing dist2pred!!!");
 
         // add contract
+        rmParser->addContract();
         std::cout << "ctype : " << ctype->second
                   << " c2l : " << c2l->second
                   << " c2f : " << c2f->second

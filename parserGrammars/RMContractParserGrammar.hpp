@@ -37,11 +37,11 @@ public:
     RMContractParserGrammar();
     ~RMContractParserGrammar() override;
 
-    void parse(std::string &s, unsigned lineNo) override;
+    void parse(RMParser *rmParser, std::string &s, unsigned lineNo) override;
 private:
     void initRegexPattern();
     void initParametersValueMap();
-    void evaluate(const std::smatch &match, unsigned lineNo);
+    void evaluate(RMParser *rmParser , const std::smatch &match, unsigned lineNo);
 
     std::map<std::string, CONTRACT_TYPE> ctypeMap;
     std::map<std::string, QUALITY> qualityMap;
