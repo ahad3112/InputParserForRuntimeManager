@@ -46,8 +46,7 @@ private:
     std::map<std::string, CONTRACT_TYPE> ctypeMap;
     std::map<std::string, QUALITY> qualityMap;
     std::map<std::string, ACTIVE_CONTROLLER > controllerMap;
-    std::map<std::string, GAP_CONTROL > gapcontrolMap;
+    std::map<std::string, GAP_CONTROL > dist2predMap;
 };
-
 
 #endif //CONTRACT_PARSER_RMCONTRACTPARSERGRAMMAR_HPP
